@@ -301,6 +301,42 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+.collection-carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.carousel-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.carousel-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.collection-window {
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.collection-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
 .category-card,
 .feature-card,
 .card,
@@ -310,6 +346,35 @@ a {
   border-radius: var(--radius);
   padding: 18px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.category-card.with-image {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 1.2fr;
+  gap: 16px;
+  min-width: min(660px, 100vw);
+  padding: 0;
+  overflow: hidden;
+}
+
+.category-img {
+  min-height: 240px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.category-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12, 12, 15, 0.1), rgba(12, 12, 15, 0.5));
+}
+
+.category-body {
+  padding: 18px;
+  display: grid;
+  gap: 10px;
 }
 
 .category-header {
