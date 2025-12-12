@@ -91,6 +91,24 @@ const heroSlides = [
   },
 ]
 
+const defaultCollectionImage =
+  'https://images.unsplash.com/photo-1583605830708-d49ef2f4d05b?auto=format&fit=crop&w=1400&q=80'
+
+const categoryImages = {
+  Necklaces:
+    'https://images.unsplash.com/photo-1617034463532-6c8cf0dadc92?auto=format&fit=crop&w=1400&q=80',
+  Bangles:
+    'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1400&q=80',
+  Rings:
+    'https://images.unsplash.com/photo-1606294664450-5b5e76ba7cf8?auto=format&fit=crop&w=1400&q=80',
+  Anklets:
+    'https://images.unsplash.com/photo-1543294001-f7cd5d7fb516?auto=format&fit=crop&w=1400&q=80',
+  Earrings:
+    'https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=1400&q=80',
+  'Personalised Silver Art':
+    'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1400&q=80',
+}
+
 const whatsappNumber = '9443379960'
 const adminPassword = 'shreeraam123'
 
@@ -111,6 +129,7 @@ function App() {
   })
 
   const [carouselIndex, setCarouselIndex] = useState(0)
+  const [collectionIndex, setCollectionIndex] = useState(0)
   const [isAdmin, setIsAdmin] = useState(false)
   const [loginError, setLoginError] = useState('')
   const [form, setForm] = useState({
@@ -142,6 +161,25 @@ function App() {
     () => Object.entries(categories).sort(([a], [b]) => a.localeCompare(b)),
     [categories],
   )
+
+  const curatedCollections = useMemo(
+    () =>
+      sortedCategories.map(([category, subs]) => {
+        const matchingProduct = products.find((item) => item.category === category)
+        return {
+          category,
+          subs,
+          image: categoryImages[category] || matchingProduct?.image || defaultCollectionImage,
+        }
+      }),
+    [products, sortedCategories],
+  )
+
+  useEffect(() => {
+    if (collectionIndex > curatedCollections.length - 1) {
+      setCollectionIndex(0)
+    }
+  }, [collectionIndex, curatedCollections.length])
 
   const resetForm = () => {
     setForm({ id: '', title: '', category: '', subcategory: '', description: '', image: '' })
@@ -279,25 +317,57 @@ function App() {
           <h2>Curated Collections</h2>
           <p>Explore jewels by category and occasion-specific subcategories.</p>
         </div>
-        <div className="category-grid">
-          {sortedCategories.map(([category, subs]) => (
-            <div key={category} className="category-card">
-              <div className="category-header">
-                <h3>{category}</h3>
-                <p>{subs.length} subcategories</p>
-              </div>
-              <div className="chip-row">
-                {subs.map((sub) => (
-                  <span key={sub} className="chip">
-                    {sub}
-                  </span>
-                ))}
-              </div>
-              <a className="link" href="#gallery">
-                View pieces
-              </a>
+        <div className="collection-carousel">
+          <button
+            className="carousel-btn"
+            type="button"
+            onClick={() => setCollectionIndex((prev) => Math.max(prev - 1, 0))}
+            disabled={collectionIndex === 0}
+            aria-label="Previous collection"
+          >
+            ‹
+          </button>
+          <div className="collection-window">
+            <div
+              className="collection-track"
+              style={{ transform: `translateX(-${collectionIndex * 100}%)` }}
+            >
+              {curatedCollections.map(({ category, subs, image }) => (
+                <article key={category} className="category-card with-image">
+                  <div className="category-img" style={{ backgroundImage: `url(${image})` }} />
+                  <div className="category-body">
+                    <div className="category-header">
+                      <h3>{category}</h3>
+                      <p>{subs.length} subcategories</p>
+                    </div>
+                    <div className="chip-row">
+                      {subs.map((sub) => (
+                        <span key={sub} className="chip">
+                          {sub}
+                        </span>
+                      ))}
+                    </div>
+                    <a className="link" href="#gallery">
+                      View pieces
+                    </a>
+                  </div>
+                </article>
+              ))}
             </div>
-          ))}
+          </div>
+          <button
+            className="carousel-btn"
+            type="button"
+            onClick={() =>
+              setCollectionIndex((prev) =>
+                Math.min(prev + 1, Math.max(curatedCollections.length - 1, 0)),
+              )
+            }
+            disabled={collectionIndex === curatedCollections.length - 1}
+            aria-label="Next collection"
+          >
+            ›
+          </button>
         </div>
       </section>
 
