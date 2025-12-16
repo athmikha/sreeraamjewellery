@@ -1,0 +1,71 @@
+/* src/components/hero.css */
+.hero{
+  position: relative;
+  min-height: 640px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  border-bottom: 1px solid rgba(90,68,63,.08);
+}
+
+.heroBg{
+  position:absolute;
+  inset:0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+}
+
+.heroOverlay{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(1000px 540px at 75% 35%, rgba(255,120,70,.38), transparent 55%),
+    linear-gradient(90deg, rgba(45,33,30,.88) 0%, rgba(45,33,30,.58) 48%, rgba(45,33,30,.22) 70%, rgba(45,33,30,.08) 100%);
+}
+
+.heroInner{
+  position: relative;
+  padding: 72px 0;
+}
+
+.heroContent{
+  max-width: 560px;
+}
+
+.heroTitle{
+  margin: 18px 0 14px;
+  font-size: clamp(40px, 4.4vw, 64px);
+  line-height: 1.05;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.heroText{
+  margin: 0 0 22px;
+  max-width: 520px;
+  color: rgba(255,255,255,.76);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.heroBtns{ margin-top: 18px; }
+
+.heroMeta{
+  margin-top: 14px;
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  color: rgba(255,255,255,.72);
+  font-size: 12.5px;
+}
+
+.spark{
+  display:inline-flex;
+  width: 18px; height: 18px;
+  align-items:center; justify-content:center;
+  border-radius: 6px;
+  background: rgba(44,37,35,.10);
+  border: 1px solid rgba(44,37,35,.12);
+}

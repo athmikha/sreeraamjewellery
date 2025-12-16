@@ -1,0 +1,62 @@
+/* src/components/collections.css */
+.collectionsGrid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+@media (max-width: 980px){
+  .collectionsGrid{ grid-template-columns: 1fr; }
+}
+
+.collectionCard{
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow:hidden;
+  height: 340px;
+  box-shadow: var(--shadow);
+  transform: translateZ(0);
+}
+.collectionCard:hover{ transform: translateY(-2px); transition: transform .18s ease; }
+
+.collectionImg{
+  position:absolute;
+  inset:0;
+  background-size: cover;
+  background-position: center;
+}
+
+.collectionShade{
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.04) 0%, rgba(0,0,0,.12) 45%, rgba(0,0,0,.40) 100%);
+}
+
+.collectionBody{
+  position:absolute;
+  inset: 0;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
+  gap: 8px;
+  color: #fff;
+}
+
+.collectionTitle{
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+}
+.collectionDesc{
+  color: rgba(255,255,255,.76);
+  font-size: 12.5px;
+}
+.collectionLink{
+  margin-top: 8px;
+  display:inline-flex;
+  gap: 10px;
+  align-items:center;
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(255,255,255,.90);
+}

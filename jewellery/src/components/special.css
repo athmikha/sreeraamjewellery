@@ -1,0 +1,104 @@
+/* src/components/special.css */
+.specialTop{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 18px;
+}
+@media (max-width: 980px){
+  .specialTop{ grid-template-columns: 1fr; }
+}
+
+.specialWide{
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  border-radius: var(--radius-xl);
+  overflow:hidden;
+  box-shadow: var(--shadow-soft);
+  background: #efe6e1;
+  min-height: 240px;
+}
+.specialWideLeft{
+  padding: 28px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.specialWideIcon{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(180,138,120,.28);
+  color: var(--brown-850);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom: 16px;
+}
+.specialWideTitle{
+  font-size: 26px;
+  font-weight: 800;
+  color: #3a2e2b;
+  line-height: 1.15;
+}
+.specialWideDesc{
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 340px;
+}
+.specialWideLink{
+  margin-top: 14px;
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--accent);
+}
+.specialWideImg{
+  background-size: cover;
+  background-position: center;
+  min-height: 240px;
+}
+
+.specialBottom{
+  margin-top: 22px;
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+@media (max-width: 980px){
+  .specialBottom{ grid-template-columns: 1fr; }
+}
+
+.miniCard{
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 22px;
+  border: 1px solid rgba(90,68,63,.08);
+}
+.miniIcon{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(180,138,120,.22);
+  color: var(--brown-850);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom: 16px;
+}
+.miniTitle{ font-weight: 800; font-size: 16px; color: #3a2e2b; }
+.miniDesc{ margin-top: 8px; color: var(--muted); font-size: 12.5px; line-height: 1.7; }
+.miniLink{
+  margin-top: 14px;
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--accent);
+}

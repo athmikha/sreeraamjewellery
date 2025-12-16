@@ -1,0 +1,96 @@
+/* src/components/showroom.css */
+.showroomBand{
+  background: #5a443f;
+  padding: 86px 0;
+  color: rgba(255,255,255,.92);
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.showroomInner{
+  text-align: center;
+  max-width: 920px;
+}
+
+.showroomIcon{
+  width: 60px;
+  height: 60px;
+  border-radius: 999px;
+  background: rgba(180,138,120,.30);
+  color: rgba(255,255,255,.92);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin: 0 auto 18px;
+}
+
+.showroomTitle{
+  margin: 0;
+  font-size: clamp(30px, 3.2vw, 44px);
+  font-weight: 800;
+  line-height: 1.12;
+}
+.showroomText{
+  margin: 14px auto 22px;
+  max-width: 720px;
+  color: rgba(255,255,255,.76);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.showroomMetaRow{
+  display:flex;
+  gap: 26px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.showroomMeta{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  color: rgba(255,255,255,.74);
+  font-size: 13px;
+}
+
+.showroomBtns{ margin: 24px 0 0; justify-content:center; }
+.showroomDivider{
+  margin: 34px auto 18px;
+  width: 86%;
+  height: 1px;
+  background: rgba(255,255,255,.12);
+}
+.showroomStatsKicker{
+  font-size: 12px;
+  color: rgba(255,255,255,.64);
+  letter-spacing: .06em;
+}
+.showroomStats{
+  margin-top: 18px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.stat{ min-width: 160px; }
+.statNum{
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1;
+  color: rgba(255,255,255,.92);
+}
+.statLbl{
+  margin-top: 6px;
+  font-size: 12px;
+  color: rgba(255,255,255,.70);
+  font-weight: 600;
+}
+.statSep{
+  width: 1px;
+  height: 44px;
+  background: rgba(255,255,255,.16);
+}
+@media (max-width: 680px){
+  .statSep{ display:none; }
+}
