@@ -1,0 +1,117 @@
+.navHeader {
+  background: #fff;
+  border-bottom: 1px solid #e5e0dc;
+  font-family: "Playfair Display", Georgia, serif;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ONE LINE */
+.navBar {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 14px 28px;
+}
+
+.navBrand {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: #1b1b1b;
+  white-space: nowrap;
+}
+
+.navLinks {
+  display: flex;
+  gap: 22px;
+  flex: 1;
+}
+
+.navLink {
+  background: none;
+  border: none;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #2b2b2b;
+}
+
+.navLink:hover {
+  color: #000;
+}
+
+.navSearch {
+  width: 220px;
+  border-radius: 18px;
+  border: 1px solid #cfc7c1;
+  padding: 6px 14px;
+  font-size: 13px;
+}
+
+/* MEGA MENU */
+.megaMenu {
+  background: #fff;
+  border-top: 1px solid #eee;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.megaInner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+}
+
+.megaLeft {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.megaTitle {
+  font-size: 12px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.megaLink {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+}
+
+.megaLink:hover {
+  text-decoration: underline;
+}
+
+.megaRight {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.megaTile {
+  text-decoration: none;
+  color: #222;
+}
+
+.megaImg {
+  height: 160px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+}
+
+.megaTile span {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}

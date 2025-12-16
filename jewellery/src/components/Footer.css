@@ -23,7 +23,7 @@
   margin: 0 0 18px;
   font-size: 12.5px;
   line-height: 1.7;
-  color: rgba(255,255,255,.70);
+  color: rgba(98, 63, 63, 0.7);
 }
 
 .socialRow{ display:flex; gap: 12px; }
@@ -39,21 +39,22 @@
   flex-direction: column;
   gap: 10px;
   font-size: 12.5px;
+   color: rgba(98, 63, 63, 0.7);
 }
 .footerHead{
   font-weight: 800;
   margin-bottom: 6px;
-  color: rgba(255,255,255,.92);
+ color: rgba(98, 63, 63, 0.7);
 }
-.footerCol a{ color: rgba(255,255,255,.74); }
-.footerCol a:hover{ color: rgba(255,255,255,.92); }
+.footerCol a{  color: rgba(98, 63, 63, 0.7); }
+.footerCol a:hover{ color: rgba(98, 63, 63, 0.7);}
 
 .footerInfo{
   display:flex;
   gap: 10px;
   align-items:flex-start;
-  color: rgba(255,255,255,.74);
-  line-height: 1.6;
+ color: rgba(98, 63, 63, 0.7);
+   line-height: 1.6;
 }
 
 .footerBottom{
