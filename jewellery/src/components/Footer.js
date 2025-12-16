@@ -1,5 +1,5 @@
 // src/components/Footer.js
-import "./footer.css";
+import "./footer.css"
 import { IconPin, IconClock, IconPhone } from "../assets/icons";
 
 function SocialIcon({ label }) {
