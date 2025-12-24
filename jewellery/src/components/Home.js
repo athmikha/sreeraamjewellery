@@ -1,5 +1,4 @@
 // src/pages/Home.js
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Collections from "../components/Collections";
 import TrustSection from "../components/TrustSection";
