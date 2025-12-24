@@ -3,14 +3,16 @@ import "./collections.css";
 import { IconArrowRight } from "../assets/icons";
 
 const items = [
-  { id: "gold", title: "Gold Jewellery", desc: "Traditional bold designs & modern elegance", img: "/assets/gold.jpg" },
+  { id: "gold", title: "Gold Jewellery", desc: "Traditional bold designs & modern elegance", img: "/assets/nav/gold1.png" },
   { id: "diamond", title: "Diamond Jewellery", desc: "Brilliant cuts for life's special moments", img: "/assets/diamond.jpg" },
   { id: "silver", title: "Silver Jewellery", desc: "Contemporary designs for everyday elegance", img: "/assets/silver.jpg" },
+  { id: "platinum", title: "Platinum Jewellery", desc: "Pure luxury with timeless sophistication", img: "/assets/platinum.jpg" },
+  { id: "custom", title: "Custom Creations", desc: "Personalised jewellery crafted just for you", img: "/assets/custom.jpg" },
 ];
 
 export default function Collections() {
   return (
-    <section className="section" id="collections">
+   <section className="section collectionsSection" id="collections">
       <div className="container">
         <div className="sectionHead">
           <div className="h2">Explore Our Collections</div>

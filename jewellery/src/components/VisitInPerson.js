@@ -49,7 +49,7 @@ export default function VisitInPerson() {
         </div>
 
         <div className="visitRight">
-          <div className="visitImg" style={{ backgroundImage: "url(/assets/visit.jpg)" }} />
+          <div className="visitImg" style={{ backgroundImage: "url(/assets/nav/gold1.png)" }} />
           <div className="visitQuote">
             <div className="visitQuoteIcon"><IconQuote /></div>
             <div className="visitQuoteText">

@@ -26,7 +26,7 @@ export default function TrustSection() {
     <section className="section trustWrap" id="about">
       <div className="container trustGrid">
         <div className="trustLeft">
-          <div className="trustImage" style={{ backgroundImage: "url(/assets/trust.jpg)" }} />
+          <div className="trustImage" style={{ backgroundImage: "url(/assets/nav/gold1.png)" }} />
           <div className="trustBadge">
             <div className="trustBadgeNum">30+</div>
             <div className="trustBadgeTxt">Years of Trust</div>

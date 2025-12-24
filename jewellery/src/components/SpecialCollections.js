@@ -23,7 +23,7 @@ export default function SpecialCollections() {
                 Explore Now <IconArrowRight />
               </div>
             </div>
-            <div className="specialWideImg" style={{ backgroundImage: "url(/assets/special-bridal.jpg)" }} />
+            <div className="specialWideImg" style={{ backgroundImage: "url(/assets/nav/gold1.png)" }} />
           </a>
 
           <a className="specialWide" href="#minimal">

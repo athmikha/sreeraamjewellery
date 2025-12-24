@@ -18,8 +18,8 @@ const NAV = [
       },
     ],
     rightTiles: [
-      { title: "Traditional Gold", img: "/assets/nav/gold1.jpg", to: "/category/gold" },
-      { title: "Modern Gold", img: "/assets/nav/gold2.jpg", to: "/category/gold" },
+      { title: "Traditional Gold", img: "/assets/nav/gold1.png", to: "/category/gold" },
+      { title: "Modern Gold", img: "/assets/nav/gold1.png", to: "/category/gold" },
     ],
   },
   {
@@ -36,8 +36,8 @@ const NAV = [
       },
     ],
     rightTiles: [
-      { title: "Bridal Diamonds", img: "/assets/nav/diamond1.jpg", to: "/category/diamond" },
-      { title: "Minimal Diamonds", img: "/assets/nav/diamond2.jpg", to: "/category/diamond" },
+      { title: "Bridal Diamonds", img: "/assets/nav/gold1.png", to: "/category/diamond" },
+      { title: "Minimal Diamonds", img: "/assets/nav/gold1.png", to: "/category/diamond" },
     ],
   },
   {
@@ -54,8 +54,8 @@ const NAV = [
       },
     ],
     rightTiles: [
-      { title: "Trendy Silver", img: "/assets/nav/silver1.jpg", to: "/category/silver" },
-      { title: "Classic Silver", img: "/assets/nav/silver2.jpg", to: "/category/silver" },
+      { title: "Trendy Silver", img: "/assets/nav/gold1.png", to: "/category/silver" },
+      { title: "Classic Silver", img: "/assets/nav/gold1.png", to: "/category/silver" },
     ],
   },
 ];

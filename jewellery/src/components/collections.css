@@ -60,3 +60,38 @@
   font-size: 13px;
   color: rgba(255,255,255,.90);
 }
+.collectionsGrid{
+  display: grid;
+  gap: 24px;
+}
+
+.collectionsSection{
+
+   max-width: 1840px;   /* wide luxury layout */
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.container{
+  
+min-width: 1440px;
+}
+/* Desktop: force 4 in first row */
+@media (min-width: 1200px){
+  .collectionsGrid{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1199px) and (min-width: 700px){
+  .collectionsGrid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 699px){
+  .collectionsGrid{
+    grid-template-columns: 1fr;
+  }
+}

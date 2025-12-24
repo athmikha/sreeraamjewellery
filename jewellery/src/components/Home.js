@@ -6,7 +6,7 @@ import SpecialCollections from "../components/SpecialCollections";
 import ShowroomBanner from "../components/ShowroomBanner";
 import VisitInPerson from "../components/VisitInPerson";
 import Footer from "../components/Footer";
-import NavbarMega from "../NavbarMega";
+import NavbarMega from "../components/NavbarMega";
 export default function Home() {
   return (
     <>
