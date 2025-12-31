@@ -243,7 +243,10 @@
   }
 
   .navLinks {
-    display: none;
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 4px;
   }
 
   .navLink {
@@ -255,10 +258,6 @@
     order: 2;
     flex: 1 1 100%;
     width: 100%;
-  }
-
-  .navToggle {
-    display: inline-flex;
   }
 
   .megaMenu {
