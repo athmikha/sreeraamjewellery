@@ -44,16 +44,23 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="heroCarousel" aria-label="Featured collection carousel">
-          <div className="carouselFrame">
-            <div className="carouselSlide" style={{ backgroundImage: "url(/assets/diamond.jpg)" }}>
+        <div className="heroCarousel" aria-label="Featured collections">
+          <div className="carouselTrack">
+            <div className="carouselCard">
+              <div className="carouselImg" style={{ backgroundImage: "url(/assets/diamond.jpg)" }} />
               <div className="carouselCaption">Bridal Diamonds</div>
             </div>
-            <div className="carouselSlide" style={{ backgroundImage: "url(/assets/nav/gold1.png)", animationDelay: "6s" }}>
+            <div className="carouselCard">
+              <div className="carouselImg" style={{ backgroundImage: "url(/assets/nav/gold1.png)" }} />
               <div className="carouselCaption">Traditional Gold</div>
             </div>
-            <div className="carouselSlide" style={{ backgroundImage: "url(/assets/special-minimal.jpg)", animationDelay: "12s" }}>
+            <div className="carouselCard">
+              <div className="carouselImg" style={{ backgroundImage: "url(/assets/special-minimal.jpg)" }} />
               <div className="carouselCaption">Minimalist Sets</div>
+            </div>
+            <div className="carouselCard">
+              <div className="carouselImg" style={{ backgroundImage: "url(/assets/silver.jpg)" }} />
+              <div className="carouselCaption">Silver Elegance</div>
             </div>
           </div>
         </div>
