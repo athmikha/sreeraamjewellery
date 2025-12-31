@@ -10,6 +10,21 @@
 @media (max-width: 980px){
   .trustGrid{ grid-template-columns: 1fr; gap: 26px; }
 }
+@media (max-width: 700px){
+  .trustLeft{
+    display:flex;
+    flex-direction: column;
+  }
+  .trustImage{
+    height: 320px;
+  }
+  .trustBadge{
+    position: static;
+    width: auto;
+    align-self: flex-end;
+    margin-top: -22px;
+  }
+}
 
 .trustLeft{
   position: relative;
