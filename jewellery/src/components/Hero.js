@@ -43,6 +43,20 @@ export default function Hero() {
             <span>Visit us at Oppanakara Street, Town Hall area, Coimbatore</span>
           </div>
         </div>
+
+        <div className="heroCarousel" aria-label="Featured collection carousel">
+          <div className="carouselFrame">
+            <div className="carouselSlide" style={{ backgroundImage: "url(/assets/diamond.jpg)" }}>
+              <div className="carouselCaption">Bridal Diamonds</div>
+            </div>
+            <div className="carouselSlide" style={{ backgroundImage: "url(/assets/nav/gold1.png)", animationDelay: "6s" }}>
+              <div className="carouselCaption">Traditional Gold</div>
+            </div>
+            <div className="carouselSlide" style={{ backgroundImage: "url(/assets/special-minimal.jpg)", animationDelay: "12s" }}>
+              <div className="carouselCaption">Minimalist Sets</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -152,3 +152,19 @@ img{ max-width: 100%; display: block; }
   .grid3{ grid-template-columns: 1fr; }
   .section{ padding: 56px 0; }
 }
+
+@media (max-width: 700px){
+  .container{
+    width: min(var(--container), calc(100% - 32px));
+  }
+  .section{
+    padding: 48px 0;
+  }
+  .btnRow{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btnRow .btn{
+    width: 100%;
+  }
+}
