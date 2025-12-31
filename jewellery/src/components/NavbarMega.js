@@ -62,6 +62,7 @@ const NAV = [
 
 export default function NavbarMega() {
   const [openKey, setOpenKey] = useState(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
   const openItem = useMemo(() => NAV.find(x => x.key === openKey), [openKey]);
 
@@ -85,6 +86,17 @@ export default function NavbarMega() {
         </nav>
 
         <input className="navSearch" placeholder="Search jewellery" />
+
+        <button
+          className="navToggle"
+          type="button"
+          onClick={() => setMobileOpen((prev) => !prev)}
+          aria-expanded={mobileOpen}
+          aria-controls="mobileMenu"
+        >
+          <span className="navToggleIcon" />
+          <span className="navToggleText">Menu</span>
+        </button>
       </div>
 
       {/* MEGA MENU */}
@@ -118,6 +130,43 @@ export default function NavbarMega() {
           </div>
         </div>
       )}
+
+      <div className={`mobileMenu ${mobileOpen ? "isOpen" : ""}`} id="mobileMenu">
+        {NAV.map((item) => (
+          <div className="mobileMenuSection" key={item.key}>
+            <button
+              className="mobileMenuTrigger"
+              type="button"
+              onClick={() => setOpenKey(openKey === item.key ? null : item.key)}
+            >
+              <span>{item.label}</span>
+              <span className={`mobileMenuCaret ${openKey === item.key ? "isOpen" : ""}`} />
+            </button>
+            {openKey === item.key && (
+              <div className="mobileMenuPanel">
+                {item.leftSections.map((sec) => (
+                  <div className="mobileMenuGroup" key={sec.title}>
+                    <div className="mobileMenuTitle">{sec.title}</div>
+                    {sec.items.map((i) => (
+                      <Link key={i.to} to={i.to} className="mobileMenuLink">
+                        {i.label}
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+                <div className="mobileMenuTiles">
+                  {item.rightTiles.map((tile) => (
+                    <Link key={tile.to} to={tile.to} className="mobileMenuTile">
+                      <div className="mobileMenuImg" style={{ backgroundImage: `url(${tile.img})` }} />
+                      <span>{tile.title}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </header>
   );
 }

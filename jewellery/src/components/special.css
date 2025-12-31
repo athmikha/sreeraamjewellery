@@ -73,6 +73,18 @@
   .specialBottom{ grid-template-columns: 1fr; }
 }
 
+@media (max-width: 720px){
+  .specialWide{
+    grid-template-columns: 1fr;
+  }
+  .specialWideLeft{
+    padding: 22px;
+  }
+  .specialWideImg{
+    min-height: 180px;
+  }
+}
+
 .miniCard{
   background: var(--surface);
   border-radius: var(--radius-lg);
