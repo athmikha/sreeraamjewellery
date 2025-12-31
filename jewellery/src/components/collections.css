@@ -1,11 +1,8 @@
 /* src/components/collections.css */
 .collectionsGrid{
   display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
-}
-@media (max-width: 980px){
-  .collectionsGrid{ grid-template-columns: 1fr; }
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .collectionCard{
@@ -60,20 +57,9 @@
   font-size: 13px;
   color: rgba(255,255,255,.90);
 }
-.collectionsGrid{
-  display: grid;
-  gap: 24px;
-}
-
 .collectionsSection{
-
-   max-width: 1840px;   /* wide luxury layout */
   margin: 0 auto;
-  padding: 0 32px;
-}
-.container{
-  
-min-width: 1440px;
+  padding: 0 16px;
 }
 /* Desktop: force 4 in first row */
 @media (min-width: 1200px){
@@ -93,5 +79,8 @@ min-width: 1440px;
 @media (max-width: 699px){
   .collectionsGrid{
     grid-template-columns: 1fr;
+  }
+  .collectionCard{
+    height: 260px;
   }
 }
