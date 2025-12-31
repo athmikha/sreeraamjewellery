@@ -1,17 +1,18 @@
 /* src/components/collections.css */
 .collectionsGrid{
   display:grid;
-  gap: 24px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .collectionCard{
   position: relative;
   border-radius: var(--radius-xl);
   overflow:hidden;
-  height: 340px;
+  height: 320px;
   box-shadow: var(--shadow);
   transform: translateZ(0);
+  background: #ebe3dd;
 }
 .collectionCard:hover{ transform: translateY(-2px); transition: transform .18s ease; }
 
@@ -25,7 +26,7 @@
 .collectionShade{
   position:absolute;
   inset:0;
-  background: linear-gradient(180deg, rgba(0,0,0,.04) 0%, rgba(0,0,0,.12) 45%, rgba(0,0,0,.40) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,.06) 0%, rgba(0,0,0,.18) 45%, rgba(0,0,0,.55) 100%);
 }
 
 .collectionBody{
@@ -34,32 +35,47 @@
   display:flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 22px;
-  gap: 8px;
+  padding: 24px 22px;
+  gap: 10px;
   color: #fff;
 }
 
 .collectionTitle{
-  font-weight: 800;
-  font-size: 26px;
-  letter-spacing: -0.02em;
+  font-family: "Playfair Display", "Poppins", serif;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: -0.01em;
 }
 .collectionDesc{
   color: rgba(255,255,255,.76);
-  font-size: 12.5px;
+  font-size: 14px;
 }
 .collectionLink{
   margin-top: 8px;
   display:inline-flex;
   gap: 10px;
   align-items:center;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 13px;
   color: rgba(255,255,255,.90);
 }
 .collectionsSection{
   margin: 0 auto;
   padding: 0 16px;
+}
+.collectionsSection .sectionHead{
+  margin-bottom: 44px;
+}
+.collectionsSection .h2{
+  font-family: "Playfair Display", "Poppins", serif;
+  font-weight: 600;
+  font-size: clamp(36px, 3.4vw, 50px);
+  letter-spacing: -0.02em;
+}
+.collectionsSection .sub{
+  max-width: 720px;
+  font-size: 16px;
+  color: #615450;
 }
 /* Desktop: force 4 in first row */
 @media (min-width: 1200px){
@@ -72,6 +88,9 @@
 @media (max-width: 1199px) and (min-width: 700px){
   .collectionsGrid{
     grid-template-columns: repeat(2, 1fr);
+  }
+  .collectionCard{
+    height: 300px;
   }
 }
 

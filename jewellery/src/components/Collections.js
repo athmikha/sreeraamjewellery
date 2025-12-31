@@ -3,11 +3,10 @@ import "./collections.css";
 import { IconArrowRight } from "../assets/icons";
 
 const items = [
-  { id: "gold", title: "Gold Jewellery", desc: "Traditional bold designs & modern elegance", img: "/assets/nav/gold1.png" },
-  { id: "diamond", title: "Diamond Jewellery", desc: "Brilliant cuts for life's special moments", img: "/assets/diamond.jpg" },
-  { id: "silver", title: "Silver Jewellery", desc: "Contemporary designs for everyday elegance", img: "/assets/silver.jpg" },
-  { id: "platinum", title: "Platinum Jewellery", desc: "Pure luxury with timeless sophistication", img: "/assets/platinum.jpg" },
-  { id: "custom", title: "Custom Creations", desc: "Personalised jewellery crafted just for you", img: "/assets/custom.jpg" },
+  { id: "gold", title: "Traditional Gold", desc: "Timeless designs passed through generations", img: "/assets/nav/gold1.png" },
+  { id: "minimal", title: "Contemporary Minimal", desc: "Modern elegance for today's style", img: "/assets/special-minimal.jpg" },
+  { id: "bridal", title: "Bridal Collection", desc: "Make your special day unforgettable", img: "/assets/diamond.jpg" },
+  { id: "diamond", title: "Diamond Elegance", desc: "Sparkle with timeless brilliance", img: "/assets/silver.jpg" },
 ];
 
 export default function Collections() {
@@ -15,10 +14,9 @@ export default function Collections() {
    <section className="section collectionsSection" id="collections">
       <div className="container">
         <div className="sectionHead">
-          <div className="h2">Explore Our Collections</div>
+          <div className="h2">Featured Collections</div>
           <p className="sub">
-            From timeless gold to contemporary diamonds and elegant silver — find the perfect piece for every generation
-            and occasion
+            Discover our curated selection of exquisite jewellery, crafted with precision and passion.
           </p>
         </div>
 
