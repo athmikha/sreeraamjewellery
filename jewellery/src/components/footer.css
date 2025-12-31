@@ -69,3 +69,16 @@
 .footerLinks{ display:flex; gap: 18px; }
 .footerLinks a{ color: rgba(255,255,255,.64); }
 .footerLinks a:hover{ color: rgba(255,255,255,.86); }
+
+@media (max-width: 700px){
+  .footerTop{
+    gap: 24px;
+  }
+  .footerBottom{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footerLinks{
+    flex-wrap: wrap;
+  }
+}

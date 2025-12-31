@@ -115,3 +115,37 @@
   font-size: 12px;
   letter-spacing: 0.06em;
 }
+
+@media (max-width: 980px) {
+  .navBar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .navBrand {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+
+  .navLinks {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .navLink {
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  .navSearch {
+    order: 2;
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .megaMenu {
+    display: none;
+  }
+}
